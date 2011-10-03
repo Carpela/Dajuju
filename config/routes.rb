@@ -1,4 +1,8 @@
 Bartimes::Application.routes.draw do
+  resources :opentimes
+
+  resources :bars
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

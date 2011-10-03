@@ -1,0 +1,33 @@
+<%= form_for(@opentime) do |f| %>
+  <% if @opentime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@opentime.errors.count, "error") %> prohibited this opentime from being saved:</h2>
+
+      <ul>
+      <% @opentime.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bar_id %><br />
+    <%= f.number_field :bar_id %>
+  </div>
+  <div class="field">
+    <%= f.label :days %><br />
+    <%= f.text_field :days %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br />
+    <%= f.text_field :start %>
+  </div>
+  <div class="field">
+    <%= f.label :finish %><br />
+    <%= f.text_field :finish %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

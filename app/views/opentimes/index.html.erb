@@ -1,0 +1,29 @@
+<h1>Listing opentimes</h1>
+
+<table>
+  <tr>
+    <th>Bar</th>
+    <th>Days</th>
+    <th>Start</th>
+    <th>Finish</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @opentimes.each do |opentime| %>
+  <tr>
+    <td><%= opentime.bar_id %></td>
+    <td><%= opentime.days %></td>
+    <td><%= opentime.start %></td>
+    <td><%= opentime.finish %></td>
+    <td><%= link_to 'Show', opentime %></td>
+    <td><%= link_to 'Edit', edit_opentime_path(opentime) %></td>
+    <td><%= link_to 'Destroy', opentime, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Opentime', new_opentime_path %>

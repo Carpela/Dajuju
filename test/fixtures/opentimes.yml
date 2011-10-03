@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  bar_id: 1
+  days: MyString
+  start: MyString
+  finish: MyString
+
+two:
+  bar_id: 1
+  days: MyString
+  start: MyString
+  finish: MyString

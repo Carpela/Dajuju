@@ -1,0 +1,2 @@
+module OpentimesHelper
+end

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Bar:</b>
+  <%= @opentime.bar_id %>
+</p>
+
+<p>
+  <b>Days:</b>
+  <%= @opentime.days %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @opentime.start %>
+</p>
+
+<p>
+  <b>Finish:</b>
+  <%= @opentime.finish %>
+</p>
+
+
+<%= link_to 'Edit', edit_opentime_path(@opentime) %> |
+<%= link_to 'Back', opentimes_path %>

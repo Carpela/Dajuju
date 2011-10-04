@@ -30,6 +30,9 @@
   <%= @bar.website %>
 </p>
 
+<% @bar.opentimes.sort_by(&:days).each do |time| %>
+  <div><%= time.days %>: <%= time.start %>-<%= time.finish %></div>
+<% end %>
 
 <%= link_to 'Edit', edit_bar_path(@bar) %> |
 <%= link_to 'Back', bars_path %>

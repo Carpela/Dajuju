@@ -16,11 +16,16 @@ def getdata(idnum)
  p barinfo
  p barinfo.index("Close")
 end
+
+
+
 def change2stringadd1(input)
   var1 = Integer(input)
   var1=var1+1
   output = var1.to_s()
   end
+
+
 idnum2 = '1422'
  pub1 = getdata(idnum2)
  idnum2 = change2stringadd1(idnum2)

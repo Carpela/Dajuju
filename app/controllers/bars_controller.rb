@@ -2,7 +2,11 @@ class BarsController < ApplicationController
   # GET /bars
   # GET /bars.json
   def index
-    @bars = Bar.all
+    if params[:days]
+      @bars = Opentime.where(:days => params[:days]).map(&:bar).uniq
+    else
+      @bars = Bar.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb

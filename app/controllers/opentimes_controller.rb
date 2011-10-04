@@ -2,7 +2,11 @@ class OpentimesController < ApplicationController
   # GET /opentimes
   # GET /opentimes.json
   def index
-    @opentimes = Opentime.all
+    if params[:days].blank?
+      @opentimes = Opentime.all
+    else
+      @opentimes = Opentime.where(:days => params[:days])
+    end
 
     respond_to do |format|
       format.html # index.html.erb

@@ -6,7 +6,7 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'mysql2', "0.2.11"
+gem 'mysql2'
 
 gem 'json'
 

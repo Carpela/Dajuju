@@ -1,0 +1,21 @@
+%h1 Listing opentimes
+%table
+  %tr
+    %th Bar
+    %th Days
+    %th Start
+    %th Finish
+    %th
+    %th
+    %th
+  - @opentimes.each do |opentime|
+    %tr
+      %td= opentime.bar.name
+      %td= opentime.days
+      %td= opentime.start
+      %td= opentime.finish
+      %td= link_to 'Show', opentime
+      %td= link_to 'Edit', edit_opentime_path(opentime)
+      %td= link_to 'Destroy', opentime, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New Opentime', new_opentime_path

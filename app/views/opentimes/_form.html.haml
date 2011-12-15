@@ -1,0 +1,31 @@
+= form_for(@opentime) do |f|
+  - if @opentime.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@opentime.errors.count, "error")
+        prohibited this opentime from being saved:
+      %ul
+        - @opentime.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :bar_id
+    %br/
+    = f.number_field :bar_id
+  .field
+    = f.label :days
+    %br/
+    = f.text_field :days
+  .field
+    = f.label :start
+    %br/
+    = f.text_field :start
+  .field
+    = f.label :finish
+    %br/
+    = f.text_field :finish
+  .field
+    = f.label :day_id
+    %br/
+    = f.text_field :day_id
+  .actions
+    = f.submit

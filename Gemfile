@@ -12,6 +12,8 @@ gem 'json'
 
 
 gem 'haml'
+gem 'haml-rails'
+
 gem 'compass'
 
 # Gems used only for assets and not required
@@ -36,3 +38,7 @@ gem 'capistrano'
 # To use debugger
 # gem 'ruby-debug'
 
+group :development do
+  gem 'hpricot'
+  gem 'ruby_parser'
+end

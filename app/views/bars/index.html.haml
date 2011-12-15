@@ -1,0 +1,37 @@
+%script{:src => "http://maps.google.com/maps?file=api&v=2&key=AIzaSyCoCzynRPhG9DYNrGLF3V_M6U6emE8bPyM&sensor=true_or_false", :type => "text/javascript"}
+:javascript
+  function initialize() {
+  if (GBrowserIsCompatible()) {
+    var map = new GMap2(document.getElementById("map_canvas"));
+    map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+    map.setUIToDefault();
+  }
+
+%body{:onload => "initialize()", :onunload => "GUnload()"}
+  #map_canvas{:style => "width: 500px; height: 300px"}
+  
+%h1 Listing bars
+%table
+  %tr
+    %th Name
+    %th Area
+    %th Type
+    %th Address
+    %th Phone
+    %th Website
+    %th
+    %th
+    %th
+  - @bars.each do |bar|
+    %tr
+      %td= bar.name
+      %td= bar.area
+      %td= bar.type
+      %td= bar.address
+      %td= bar.phone
+      %td= bar.website
+      %td= link_to 'Show', bar
+      %td= link_to 'Edit', edit_bar_path(bar)
+      %td= link_to 'Destroy', bar, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New Bar', new_bar_path

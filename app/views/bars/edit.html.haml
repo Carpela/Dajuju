@@ -1,0 +1,10 @@
+%h1 Editing bar
+= render 'form'
+- @bar.opentimes.each do |time|
+  %div
+    = time.inspect
+    = link_to 'Edit', edit_opentime_path(time)
+= link_to 'New', new_opentime_path
+= link_to 'Show', @bar
+|
+\#{link_to 'Back', bars_path}

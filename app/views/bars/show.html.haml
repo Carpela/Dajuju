@@ -1,0 +1,26 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @bar.name
+%p
+  %b Area:
+  = @bar.area
+%p
+  %b Type:
+  = @bar.type
+%p
+  %b Address:
+  = @bar.address
+%p
+  %b Phone:
+  = @bar.phone
+%p
+  %b Website:
+  = @bar.website
+- @bar.opentimes.sort_by(&:days).each do |time|
+  %div
+    = time.days
+    \: #{time.start}-#{time.finish}
+= link_to 'Edit', edit_bar_path(@bar)
+|
+\#{link_to 'Back', bars_path}

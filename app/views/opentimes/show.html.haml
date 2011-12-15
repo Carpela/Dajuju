@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Bar:
+  = @opentime.bar.name
+%p
+  %b Days:
+  = @opentime.days
+%p
+  %b Start:
+  = @opentime.start
+%p
+  %b Finish:
+  = @opentime.finish
+= link_to 'Edit', edit_opentime_path(@opentime)
+|
+\#{link_to 'Back', opentimes_path}
